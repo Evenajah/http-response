@@ -1,7 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, VERSION } from '@angular/core';
 import { of } from 'rxjs';
-import { ajax } from 'rxjs/ajax';
 import { catchError } from 'rxjs/operators';
 
 @Component({
