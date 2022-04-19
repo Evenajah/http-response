@@ -16,13 +16,7 @@ export class AppComponent {
   ngOnInit() {
     this.http
       .get('https://pokeapi.co/api/v2/pokemon/dittoss')
-      .pipe(
-        catchError((err: HttpErrorResponse) => {
-          return of(err);
-        })
-      )
-      .subscribe((res) => {
-        console.log(res);
-      });
+      .pipe(catchError((err: HttpErrorResponse) => of(err)))
+      .subscribe(console.log);
   }
 }
