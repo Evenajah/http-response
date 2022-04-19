@@ -15,7 +15,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.http
-      .get('https://pokeapi.co/api/v2/pokemon/dittoss')
+      .get('https://pokeapi.co/api/v2/pokemon/dittoss') //wrong url api
       .pipe(catchError((err: HttpErrorResponse) => of(err)))
       .subscribe(console.log);
   }
